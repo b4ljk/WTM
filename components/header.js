@@ -12,11 +12,11 @@ import {
 	VStack,
 	IconButton,
 	CloseButton,
+	Image,
 } from "@chakra-ui/react";
 import { AiOutlineMenu } from "react-icons/ai";
-import Image from "next/image";
 // import { Logo } from "@choc-ui/logo";
-
+//next inage
 const Header = () => {
 	const bg = useColorModeValue("white", "gray.800");
 	const mobileNav = useDisclosure();
@@ -35,7 +35,7 @@ const Header = () => {
 				<Flex alignItems="center" justifyContent="space-between" mx="auto">
 					<Flex>
 						<chakra.a href="/" title="Choc Home Page" display="flex" alignItems="center">
-							<Image src={""} />
+							<Image height={"80px"} src="/WTM logo_horiz_rgb 1.png" />
 							<VisuallyHidden>WTM</VisuallyHidden>
 						</chakra.a>
 					</Flex>
@@ -49,7 +49,16 @@ const Header = () => {
 								md: "inline-flex",
 							}}
 						>
-							<Button variant="ghost">Features</Button>
+							<Button
+								px="30px"
+								borderColor={"blue.500"}
+								color={"blue.500"}
+								borderWidth={2}
+								borderRadius={0}
+								variant="outline"
+							>
+								IWD 2022
+							</Button>
 						</HStack>
 						{/* <Button colorScheme="brand" size="sm">
 							Get Started
@@ -94,19 +103,7 @@ const Header = () => {
 								<CloseButton aria-label="Close menu" onClick={mobileNav.onClose} />
 
 								<Button w="full" variant="ghost">
-									Features
-								</Button>
-								<Button w="full" variant="ghost">
-									Pricing
-								</Button>
-								<Button w="full" variant="ghost">
-									Blog
-								</Button>
-								<Button w="full" variant="ghost">
-									Company
-								</Button>
-								<Button w="full" variant="ghost">
-									Sign in
+									IWD 2022
 								</Button>
 							</VStack>
 						</Box>
