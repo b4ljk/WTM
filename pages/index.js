@@ -2,8 +2,10 @@ import { Box, Container, Text, Image, Flex } from "@chakra-ui/react";
 import Head from "next/head";
 import Footer from "../components/footer";
 import Header from "../components/header";
+import NewsCard from "../components/newsCard";
 import Page2 from "../components/page2";
 import styles from "../styles/Home.module.css";
+
 export default function Home() {
 	return (
 		<div>
@@ -24,6 +26,14 @@ export default function Home() {
 						<Text fontWeight={"bold"} textAlign={"center"}>
 							Үйл ажиллагаа, арга хэмжээ зохион байгуулах
 						</Text>
+					</Flex>
+				</Container>
+			</Box>
+			<Box minH={"40vh"}>
+				<Container py="16" maxW={"container.lg"}>
+					<Flex>
+						<NewsCard />
+						<NewsCard />
 					</Flex>
 				</Container>
 			</Box>
