@@ -19,11 +19,18 @@ export default function Home() {
 							fontWeight={"black"}
 							textTransform={"uppercase"}
 							as={"h1"}
-							color={"white"}
+							color={"blue.100"}
 						>
 							WOmen techmakers mongolia
 						</Text>
-						<Text fontSize={"2vw"} color={"white"}>
+						<Text
+							w="50%"
+							textAlign={"end"}
+							fontWeight={"thin"}
+							letterSpacing={5}
+							fontSize={"2xl"}
+							color={"white"}
+						>
 							POWERED BY
 						</Text>
 					</Center>
