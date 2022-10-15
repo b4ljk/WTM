@@ -1,16 +1,35 @@
-import { Box, Container, Text, Image, Flex } from "@chakra-ui/react";
+import { Box, Container, Text, Image as ChakraImage, Flex, Center } from "@chakra-ui/react";
 import Head from "next/head";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import NewsCard from "../components/newsCard";
 import Page2 from "../components/page2";
 import styles from "../styles/Home.module.css";
-
 export default function Home() {
 	return (
 		<div>
 			<Header />
-			<Box height={"90vh"} bg="facebook.200"></Box>
+			<Box pos={"relative"} bg="#0E2A47" px="5%">
+				<Box left={0} w={"full"} height={"full"} pos={"absolute"} zIndex={999}>
+					<Center h="full" display={"flex"} flexDir={"column"}>
+						<Text
+							w="80%"
+							textAlign={"center"}
+							fontSize={"5vw"}
+							fontWeight={"black"}
+							textTransform={"uppercase"}
+							as={"h1"}
+							color={"white"}
+						>
+							WOmen techmakers mongolia
+						</Text>
+						<Text fontSize={"2vw"} color={"white"}>
+							POWERED BY
+						</Text>
+					</Center>
+				</Box>
+				<ChakraImage position={"relative"} maxH={"95vh"} w={"full"} src="/WorldMap.svg" />
+			</Box>
 			<Box minHeight={"40vh"}>
 				<Page2 />
 			</Box>
