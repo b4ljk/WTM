@@ -2,7 +2,7 @@ import { Box, Container, Text, Image } from "@chakra-ui/react";
 export default function Page2() {
 	return (
 		<Container py="16" maxW={"container.md"}>
-			<Text textAlign={"center"}>
+			<Text fontSize={18} textAlign={"center"} letterSpacing="wider" fontWeight={"medium"}>
 				Google компани 2012 оноос эхлэн технологийн салбар дахь эмэгтэйчүүдийг дэмжих, урам зориг өгөх, мөн энэ
 				салбар дахь хүйсийн тэнцвэрт байдлыг нэмэгдүүлэх зорилгоор Women Techmakers хөтөлбөрийг эхлүүлсэн нь
 				өнөөг хүртэл дэлхийн

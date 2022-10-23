@@ -1,44 +1,59 @@
-import { Box, Flex, Image, Link, chakra } from "@chakra-ui/react";
+import React from "react";
+import { Box, Flex, Icon, Image, chakra } from "@chakra-ui/react";
 
-export default function NewsCard() {
+import { MdEmail, MdHeadset, MdLocationOn, MdCalendarToday } from "react-icons/md";
+import { BsFillBriefcaseFill } from "react-icons/bs";
+
+export default function App({ title, image, link, date, description }) {
 	return (
-		<Box mx="4" rounded="lg" shadow="md" bg="white" _dark={{ bg: "gray.800" }} maxW="2xl">
-			<Image
+		<Flex w="full" alignItems="center" justifyContent="center">
+			<Box
+				m={2}
+				w="sm"
+				mx="auto"
+				bg="white"
+				_dark={{ bg: "gray.800" }}
+				shadow="lg"
 				rounded="lg"
-				w="full"
-				h={64}
-				fit="cover"
-				src="https://static1.squarespace.com/static/5ac589eb8ab722aa77be2eeb/5b479b056d2a73336ed80ffe/5b50d290562fa7d2dabe2955/1532023444871/random_interactive_share.jpg"
-				alt="Article"
-			/>
+				overflow="hidden"
+			>
+				<Image
+					w="full"
+					h={56}
+					fit="cover"
+					objectPosition="center"
+					src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
+					alt="avatar"
+				/>
 
-			<Box p={6}>
-				<Box>
-					<Link
-						display="block"
-						color="gray.800"
-						_dark={{ color: "white" }}
-						fontWeight="bold"
-						fontSize="2xl"
-						mt={2}
-						_hover={{ color: "gray.600", textDecor: "underline" }}
-					>
-						I Built A Successful Blog In One Year
-					</Link>
-					<chakra.p mt={2} fontSize="sm" color="gray.600" _dark={{ color: "gray.400" }}>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie parturient et sem ipsum
-						volutpat vel.
+				<Flex alignItems="center" px={6} py={3} bg="gray.900">
+					<Icon as={MdHeadset} h={6} w={6} color="white" />
+
+					<chakra.h1 mx={3} color="white" fontWeight="bold" fontSize="lg">
+						Focusing
+					</chakra.h1>
+				</Flex>
+
+				<Box py={4} px={6}>
+					<chakra.h1 fontSize="xl" fontWeight="bold" color="gray.800" _dark={{ color: "white" }}>
+						Patterson johnson
+					</chakra.h1>
+
+					<chakra.p py={2} color="gray.700" _dark={{ color: "gray.400" }}>
+						Full Stack maker & UI / UX Designer , love hip hop music Author of Building UI.
 					</chakra.p>
-				</Box>
 
-				<Box mt={4}>
-					<Flex alignItems="center">
-						<chakra.span mx={1} fontSize="sm" color="gray.600" _dark={{ color: "gray.300" }}>
-							21 SEP 2015
-						</chakra.span>
-					</Flex>
+					{date && (
+						<Flex alignItems="center" mt={4} color="gray.500" _dark={{ color: "gray.200" }}>
+							<Icon as={MdCalendarToday} h={5} w={6} mr={1} />
+
+							<chakra.h1 px={2} fontSize="sm">
+								{date}
+							</chakra.h1>
+						</Flex>
+					)}
 				</Box>
 			</Box>
-		</Box>
+		</Flex>
 	);
 }
