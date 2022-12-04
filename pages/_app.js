@@ -1,6 +1,7 @@
 // pages/_app.js
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import "@fontsource/montserrat";
+import "@fontsource/montserrat/700.css";
 import "@fontsource/libre-franklin/900.css";
 import "@fontsource/roboto";
 const theme = extendTheme({

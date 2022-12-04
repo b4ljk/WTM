@@ -29,7 +29,7 @@ const Header = () => {
 					base: 2,
 					sm: 4,
 				}}
-				py={4}
+				py={{ md: 1, base: 4 }}
 				shadow="md"
 			>
 				<Flex alignItems="center" justifyContent="space-between" mx="auto">

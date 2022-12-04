@@ -6,11 +6,21 @@ import Header from "../components/header";
 import NewsCard from "../components/newsCard";
 import Page2 from "../components/page2";
 import styles from "../styles/Home.module.css";
+import Image from "next/image";
+// import image
+import gif1 from "../public/arrow.gif";
 export default function Home() {
+	function handleScroll() {
+		window.scroll({
+			top: 700,
+			left: 0,
+			behavior: "smooth",
+		});
+	}
 	return (
 		<div>
 			<Header />
-			<Box pos={"relative"} bg="#0E2A47" px="5%">
+			<Box pos={"relative"}>
 				<SlideUpWhenVisible>
 					<Box left={0} w={"full"} height={"full"} pos={"absolute"} zIndex={999}>
 						<Center h="full" display={"flex"} flexDir={"column"}>
@@ -21,24 +31,56 @@ export default function Home() {
 								fontWeight={900}
 								textTransform={"uppercase"}
 								as={"h1"}
-								color={"blue.100"}
+								color={"black"}
 								fontFamily={"librefranklin"}
 							>
-								WOmen techmakers mongolia
+								Women techmakers mongolia
 							</Text>
-							<Text
+							<Box
+								ml="20"
 								w="50%"
-								textAlign={"end"}
-								fontWeight={"thin"}
-								letterSpacing={5}
-								fontSize={"2xl"}
-								color={"white"}
+								display="flex"
+								flexDir={{ md: "row", base: "column" }}
+								justifyContent={{ md: "flex-end", base: "center" }}
 							>
-								POWERED BY
-							</Text>
+								<Text
+									textTransform="uppercase"
+									mr="2"
+									fontWeight={"thin"}
+									letterSpacing={5}
+									fontSize={"2xl"}
+									color={"white"}
+									textAlign="center"
+								>
+									POWERED BY
+								</Text>
+								<ChakraImage height={"35px"} w="auto" src="/google.png" />
+							</Box>
+
+							<Box pos="absolute" bottom="50px" cursor="pointer" as="a" onClick={handleScroll}>
+								<Image src={gif1} alt="my gif" height={50} width={50} />
+							</Box>
 						</Center>
 					</Box>
-					<ChakraImage position={"relative"} maxH={"95vh"} w={"full"} src="/WorldMap.svg" />
+					<Box
+						position={"relative"}
+						height="95vh"
+						fit="cover"
+						w={"full"}
+						bgGradient={["linear(to-tr, #f5f5, #f5f225)"]}
+					>
+						<Box>
+							<Box
+								backgroundImage="/bg.png"
+								bgRepeat="round"
+								alt="background"
+								w={"full"}
+								h={"full"}
+								position={"absolute"}
+								zIndex={-1}
+							/>
+						</Box>
+					</Box>
 				</SlideUpWhenVisible>
 			</Box>
 			<Box minHeight={"40vh"}>
