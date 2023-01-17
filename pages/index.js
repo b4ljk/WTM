@@ -7,7 +7,6 @@ import NewsCard from "../components/newsCard";
 import Page2 from "../components/page2";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
-import { ParticlesContainer } from "../components/particles";
 // import image
 import gif1 from "../public/arrow.gif";
 export default function Home() {
@@ -140,7 +139,6 @@ export default function Home() {
 					</Container>
 				</Box>
 			</SlideUpWhenVisible>
-			<ParticlesContainer />
 			<Footer />
 		</div>
 	);
