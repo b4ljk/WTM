@@ -18,7 +18,7 @@ export default function Page2() {
 					</Text>
 				</Box>
 				<Box ml={5} mt="15" flex="1">
-					<Image src={gif1} height={150} width={150} />
+					<Image src={gif1} height={200} width={200} />
 				</Box>
 			</Box>
 		);
